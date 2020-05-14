@@ -1,4 +1,4 @@
-import { ConsoleLogger } from "./ConsoleLogger";
+import { LoggerImpl } from "./LoggerImpl";
 
 export interface Counter {
   increment(): void
@@ -6,7 +6,7 @@ export interface Counter {
 
 export class CounterNaive implements Counter {
   private count: number = 0
-  private logger: ConsoleLogger = new ConsoleLogger()
+  private logger: LoggerImpl = new LoggerImpl()
 
   increment(): void {
     this.count++
