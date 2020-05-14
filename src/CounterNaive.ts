@@ -1,10 +1,6 @@
 import { LoggerImpl } from "./LoggerImpl";
 
-export interface Counter {
-  increment(): void
-}
-
-export class CounterNaive implements Counter {
+export class CounterNaive {
   private count: number = 0
   private logger: LoggerImpl = new LoggerImpl()
 
