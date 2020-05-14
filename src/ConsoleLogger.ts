@@ -12,5 +12,4 @@ export class ConsoleLogger implements LoggerDev {
   debug(message: string): void {
     console.log(message)
   }
-
 }

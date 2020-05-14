@@ -1,9 +1,7 @@
-import { LoggerImpl } from "./LoggerImpl";
-import { CounterInteractor } from "./CounterInteractor";
-import { TimeLoggerImpl } from "./TimeLoggerImpl";
+import { CounterInteractor } from "./CounterInteractor"
+import { ConsoleLoggerAdapter } from "./ConsoleLoggerAdapter"
 
-const counter = new CounterInteractor(new LoggerImpl())
-//const counter = new CounterInteractor(new TimeLoggerImpl())
+const counter = new CounterInteractor(new ConsoleLoggerAdapter())
 
 counter.increment()
 counter.increment()
