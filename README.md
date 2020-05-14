@@ -4,6 +4,15 @@
 
 UNDER DEVELOPMENT
 
+## Children
+[**+ db, fullstack, jest, jest-fetch-mock, json-server, react, react-hooks, react-testing-library, rest**](https://github.com/softspiders/cleanarchitecture-react-fullstack-starter)
+
+
+starter
+test-coverage
+typescript
+unit-test
+
 ---
 ## Demo
 Demo and server are both hosted on the *Codesandbox*.
