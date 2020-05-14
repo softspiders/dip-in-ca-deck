@@ -6,6 +6,17 @@ UNDER DEVELOPMENT
 
 ---
 
+## Feature tags
+- clean-architecture
+- counter-app
+- jest
+- starter
+- test-coverage
+- typescript
+- unit-test
+
+---
+
 ## Children
 [**+ db, fullstack, jest, jest-fetch-mock, json-server, react, react-hooks, react-testing-library, rest**](https://github.com/softspiders/cleanarchitecture-react-fullstack-starter)
 
@@ -15,17 +26,6 @@ Demo and server are both hosted on the *Codesandbox*.
 
 In separate browser tabs do:
 TBD
-
----
-
-## Feature tags
-- clean-architecture
-- counter-app
-- jest
-- starter
-- test-coverage
-- typescript
-- unit-test
 
 ---
 ## Author
