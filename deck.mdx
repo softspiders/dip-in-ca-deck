@@ -1,0 +1,201 @@
+import { Image, Notes, Head } from "mdx-deck";
+
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+
+import {
+  vsDark as naiveTheme,
+  nightOwl as dipTheme
+} from "@code-surfer/themes"
+
+export const theme = dipTheme;
+
+### This presentation was prepared using:
+
+- [mdx-deck](https://github.com/jxnblk/mdx-deck)
+- [code-surfer](https://github.com/pomber/code-surfer)
+- [draw.io](https://github.com/jgraph/drawio)
+
+<Notes>
+
+Почему на английском ?
+- Желание изначально иметь максимально широкую аудиторию. Возможно, будет создана русскоязычная версия. 
+
+Что хотелось попробовать ?
+
+Легальная разработка и публикация презентаций вне корпоративной среды:
+  - разработка презентации исключительно на инструментах Open Source (mdx-deck, code-surfer, draw.io)
+  - постоянная доступность презентаций онлайн, в том числе в режиме просмотра speaker notes - заметок докладчика
+
+Кратко об инструментах:
+- MDX-DECK - среда разработки презентаций на markdown + React (сама mdx-deck реализована на React)
+- Code Surfer - своего рода плагин для mdx-deck, позволяющий красиво демонстрировать фрагменты кода
+- Draw.io - продукт Atlassian, позволяющий бесплатно, в том числе на desktop и в онлайн, создавать необходимые диаграммы.
+
+А вообще, похоже, есть перспективы появления нового жанра типа "Статья-презентация", которой не нужен докладчик,
+поскольку она предполагается сразу в самодостатном виде - "slides + speaker notes"
+
+</Notes>
+
+---
+
+### This presentation was prepared using:
+
+- [mdx-deck](https://github.com/jxnblk/mdx-deck)
+- [code-surfer](https://github.com/pomber/code-surfer)
+- [draw.io](https://app.diagrams.net/)
+
+<Notes>
+
+...
+
+В последующих докладах (до тех пор, пока не появится что-то лучшее) для подготовки презентаций предполагается
+использовать именно этот набор инструментов.
+
+</Notes>
+
+---
+
+# Dependency Inversion Principle
+
+<Notes>
+
+Принцип Инверсии Зависимостей
+
+- Хочется показать фундаментальность принципа
+- DIP главный паттерн для создания плагинов
+- Плагинная архитектура
+- Decoupling
+- Frontend
+
+</Notes>
+
+---
+
+# What will you know
+
+<Notes>
+
+Что вы узнаете из этой презентации?
+
+</Notes>
+
+
+---
+
+- What does Clean Architecture have to do with it?
+
+<Notes>
+
+- При чём здесь Чистая Архитектура?
+
+</Notes>
+
+---
+
+- What does Clean Architecture have to do with it?
+- Are all dependencies worth inverting?
+
+<Notes>
+
+- При чём здесь Чистая Архитектура?
+- Все ли зависимости стоит инвертировать?
+
+</Notes>
+
+---
+
+- What does Clean Architecture have to do with it?
+- Are all dependencies worth inverting?
+- What exactly is inverted?
+
+<Notes>
+
+- При чём здесь Чистая Архитектура?
+- Все ли зависимости стоит инвертировать?
+- Что именно инвертируется?
+
+</Notes>
+
+---
+
+- What does Clean Architecture have to do with it?
+- Are all dependencies worth inverting?
+- What exactly is inverted?
+- And something else
+
+<Notes>
+
+- При чём здесь Чистая Архитектура?
+- Все ли зависимости стоит инвертировать?
+- Что именно инвертируется?
+- И кое-что ещё
+
+</Notes>
+
+---
+
+# S O L I D
+
+<Notes>
+
+Начнём с принципов SOLID.
+
+</Notes>
+
+---
+
+# S O L I D
+
+# The principles of Clean Architecture
+
+<Notes>
+
+Почему для нас так важен SOLID ?
+
+В своих проектах мы планируем использовать принципы Чистой Архитектуры, которые по сути являются принципами SOLID.
+
+</Notes>
+
+---
+
+- **S**ingle Responsibility Principle (SRP)
+
+- **O**pen-Closed Principle (OCP)
+
+- **L**iskov Substitution Principle (LCP)
+
+- **I**nterface Segregation Principle (ICP)
+
+- **D**ependency Inversion Principle (DIP)
+
+<Notes>
+Как известно, SOLID это аббревиатура, в которой каждой букве соответствует один из пяти принципов.
+</Notes>
+
+---
+
+- **S**ingle Responsibility Principle (SRP)
+
+- **O**pen-Closed Principle (OCP)
+
+- **L**iskov Substitution Principle (LCP)
+
+- **I**nterface Segregation Principle (ICP)
+
+- **Dependency Inversion Principle** (**DIP**)
+
+<Notes>
+Сегодня будем говорить о принципе, обозначенном буквой - 'D', но который, несмотря на своё последнее место, для Чистой
+Архитектуры, пожалуй, является одним из главных.
+
+Как говорится, "The last but not the least".
+
+</Notes>
+
+---
+
+# THANK YOU FOR YOUR ATTENTION!
