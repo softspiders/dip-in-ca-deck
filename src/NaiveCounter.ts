@@ -1,6 +1,6 @@
 import { LoggerImpl } from "./LoggerImpl";
 
-export class CounterNaive {
+export class NaiveCounter {
   private count: number = 0
   private logger: LoggerImpl = new LoggerImpl()
 

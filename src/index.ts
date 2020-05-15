@@ -1,6 +1,6 @@
-import { CounterNaive } from "./CounterNaive";
+import { NaiveCounter } from "./NaiveCounter";
 
-const counter = new CounterNaive()
+const counter = new NaiveCounter()
 
 counter.increment()
 counter.increment()
