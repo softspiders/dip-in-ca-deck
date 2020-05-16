@@ -7,22 +7,12 @@ import {
 } from "code-surfer";
 
 import {
-  vsDark as naiveTheme,
-  nightOwl as dipTheme
+  nightOwl as primaryTheme
 } from "@code-surfer/themes"
 
 import naive from "./diagrams/naive.svg";
 
-
-export const theme = dipTheme;
-
-<Image src={naive}
-    style={{
-      width: '100vw',
-      height: '100vh',
-}}/>
-
----
+export const theme = primaryTheme;
 
 ### This presentation was prepared using:
 
@@ -204,6 +194,40 @@ export const theme = dipTheme;
 Как говорится, "The last but not the least".
 
 </Notes>
+
+---
+
+<Image src={naive}
+    style={{
+      width: '100vw',
+      height: '100vh',
+}}/>
+
+---
+
+<CodeSurfer>
+
+
+```ts file=../../src/NaiveCounter.ts title="Бесхитростная реализация" subtitle="Да"
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurferColumns themes={[primaryTheme]}>
+
+<Step>
+
+```ts file=../../src/NaiveCounter.ts title="Бесхитростная реализация счётчика" subtitle="Да"
+```
+
+```ts file=../../src/NaiveLogger.ts title="Бесхитростная реализация логгера" subtitle="Да"
+```
+
+</Step>
+
+</CodeSurferColumns>
 
 ---
 
