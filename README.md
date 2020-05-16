@@ -10,6 +10,7 @@ UNDER DEVELOPMENT
 - clean-architecture
 - counter-app
 - jest
+- ss-deck
 - starter
 - test-coverage
 - typescript
