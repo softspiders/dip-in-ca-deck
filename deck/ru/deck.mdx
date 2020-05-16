@@ -13,6 +13,8 @@ import {
 
 export const theme = smartTheme;
 
+import naive from "./diagrams/naive.svg";
+
 ### Для подготовки презентации использовались инструменты:
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck)
@@ -33,7 +35,8 @@ export const theme = smartTheme;
 Кратко об инструментах:
 - MDX-DECK - среда разработки презентаций на markdown + React (сама mdx-deck реализована на React)
 - Code Surfer - своего рода плагин для mdx-deck, позволяющий красиво демонстрировать фрагменты кода
-- Draw.io - продукт Atlassian, позволяющий бесплатно, в том числе на desktop и в онлайн, создавать необходимые диаграммы.
+- Draw.io - продукт проекта diagrams.net, позволяющий бесплатно, в том числе на desktop и в онлайн, создавать
+необходимые диаграммы.
 
 А вообще складывается впечатление, что, последнее время, похоже понемногу формируются новые комбинированные жанры типа
 видео + слайды (видел на InfoQ), текст + видео (часто бывает на habr).
@@ -227,7 +230,7 @@ export const theme = smartTheme;
 
 ---
 
-<CodeSurferColumns themes={[primaryTheme]}>
+<CodeSurferColumns themes={[smartTheme]}>
 
 <Step>
 
