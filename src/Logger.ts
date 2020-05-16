@@ -1,4 +1,4 @@
-export class ConsoleLogger {
+export class Logger {
   error(message: string): void {
     console.error(message)
   }
