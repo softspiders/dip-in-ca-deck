@@ -1,8 +1,8 @@
 import { LoggerImpl } from "./LoggerImpl";
 
 export class NaiveCounter {
-  private count: number = 0
-  private logger: LoggerImpl = new LoggerImpl()
+  private count = 0
+  private logger = new LoggerImpl()
 
   increment(): void {
     this.count++
