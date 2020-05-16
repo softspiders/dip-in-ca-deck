@@ -3,9 +3,10 @@
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {
-    "build": "mdx-deck build ./deck/deck.mdx",
+    "build": "mdx-deck build deck/en/deck.mdx",
     "start": "tsc && node dist/index.js",
-    "start-deck": "mdx-deck ./deck/deck.mdx"
+    "start-deck-en": "mdx-deck ./deck/en/deck.mdx",
+    "start-deck-ru": "mdx-deck ./deck/ru/deck.mdx"
   },
   "devDependencies": {
     "code-surfer": "3.1.1",
