@@ -1,6 +1,4 @@
-import { Logger } from "./Logger";
-
-export class LoggerImpl implements Logger {
+export class ConsoleLogger {
   error(message: string): void {
     console.error(message)
   }
