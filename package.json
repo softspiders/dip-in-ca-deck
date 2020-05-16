@@ -5,7 +5,6 @@
   "scripts": {
     "build": "mdx-deck build deck/en/deck.mdx",
     "start": "tsc && node dist/index.js",
-    "start-deck-en": "mdx-deck ./deck/en/deck.mdx",
     "start-deck-ru": "mdx-deck ./deck/ru/deck.mdx"
   },
   "devDependencies": {
