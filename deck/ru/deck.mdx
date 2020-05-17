@@ -16,6 +16,7 @@ import myTheme from './lib/theme'
 export const theme = myTheme
 //export const theme = smartTheme;
 
+import counterWithLogger from "./diagrams/counterWithLogger.svg";
 import naive from "./diagrams/naive.svg";
 import naive1 from "./diagrams/naive1.svg";
 import naive2 from "./diagrams/naive2.svg";
@@ -128,6 +129,16 @@ import naive3 from "./diagrams/naive3.svg";
 
 Сделаем попытку это исправить.
 
+Какова целевая аудитория у этой презентации ?
+Конечно, в первую очередь это разработчики, не знакомые или недостаточно хорошо знакомые  с принципом *Dependency
+Inversion*.
+
+Но, надеюсь, презентация будет интересна существенно большему кругу "зрителей", поскольку в ней затрагиваются и другие
+интересные, смею предположить, вопросы.
+
+Примеры приводятся на TypeScript, но они без сомнения также будут понятны и разработчикам на Java, на C#, и на прочих
+ООП-языках, имеющих понятие интерфейса. 
+
 ...
 </Notes>
 
@@ -136,10 +147,11 @@ import naive3 from "./diagrams/naive3.svg";
 # Вы узнаете
 
 <Notes>
+...
 
-Какова целевая аудитория у этой презентации ?
-Из этой презентации вы узнаете ...
+Из этой презентации вы узнаете
 
+...
 </Notes>
 
 ---
@@ -247,6 +259,20 @@ S O L I D
 Как говорится, "The last but not the least".
 
 </Notes>
+
+---
+# Рассмотрим простейший счётчик
+
+<Notes>
+
+Рассмотрим простейший счётчик, которому нужно логировать каждую операцию изменения своего значения, в данном случае - 
+выполняемую функцией *increment()*.
+
+</Notes>
+
+---
+
+<Image src={counterWithLogger} style={{ width: '100vw', height: '100vh'}}/>
 
 ---
 
@@ -441,10 +467,17 @@ S O L I D
 
 <Notes>
 Что такое выходной интерфейс ?
+...
 </Notes>
 
 ---
 # Что такое *выходной интерфейс*?
+
+
+<Notes>
+Что такое выходной интерфейс ?
+TBD
+</Notes>
 
 ---
 # Точки расширения
