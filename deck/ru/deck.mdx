@@ -254,20 +254,20 @@ S O L I D
 
 <Step subtitle="Наивная реализация">
 
-```ts file=../src/naive/NaiveCounter.ts title="NaiveCounter"
+```ts file=../../src/naive/NaiveCounter.ts title="NaiveCounter"
 ```
 
-```ts file=../src/naive/ConsoleLogger.ts title="ConsoleLogger"
+```ts file=../../src/naive/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
 
 <Step subtitle="Design-time-зависимость от класса ConsoleLogger">
 
-```ts 1,5 file=../src/naive/NaiveCounter.ts title="NaiveCounter"
+```ts 1,5 file=../../src/naive/NaiveCounter.ts title="NaiveCounter"
 ```
 
-```ts 1 file=../src/naive/ConsoleLogger.ts title="ConsoleLogger"
+```ts 1 file=../../src/naive/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
@@ -303,30 +303,30 @@ S O L I D
 
 <Step subtitle="Реализация с использованием принципа Dependency Inversion">
 
-```ts file=../src/better/CounterInteractor.ts title="CounterInteractor"
+```ts file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
 ```
 
-```ts file=../src/better/ConsoleLogger.ts title="ConsoleLogger"
+```ts file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
 
 <Step subtitle="Присутствует только run-time-зависимость">
 
-```ts 5:9,14,18 file=../src/better/CounterInteractor.ts title="CounterInteractor"
+```ts 5:9,14,18 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
 ```
 
-```ts 1,3 file=../src/better/ConsoleLogger.ts title="ConsoleLogger"
+```ts 1,3 file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
 
 <Step subtitle="Инъекция зависимости через конструктор">
 
-```ts 4 file=../src/better/index.ts title="index"
+```ts 4 file=../../src/dip/index.ts title="index"
 ```
 
-```ts 14 file=../src/better/CounterInteractor.ts title="CounterInteractor"
+```ts 14 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
 ```
 
 </Step>
@@ -347,20 +347,20 @@ S O L I D
 
 <Step title="Сравниваем использование: модули index.ts">
 
-```ts file=../src/naive/index.ts subtitle="Наивная реализация"
+```ts file=../../src/naive/index.ts subtitle="Наивная реализация"
 ```
 
-```ts file=../src/better/index.ts subtitle="С использованием DIP"
+```ts file=../../src/dip/index.ts subtitle="С использованием DIP"
 ```
 
 </Step>
 
 <Step title="Сравниваем использование: модули index.ts">
 
-```ts 3 file=../src/naive/index.ts subtitle="Наивная реализация"
+```ts 3 file=../../src/naive/index.ts subtitle="Наивная реализация"
 ```
 
-```ts 2,4 file=../src/better/index.ts subtitle="С использованием DIP"
+```ts 2,4 file=../../src/dip/index.ts subtitle="С использованием DIP"
 ```
 
 </Step>
@@ -373,20 +373,20 @@ S O L I D
 
 <Step title="Сравниваем бизнес-логику - сами счётчики">
 
-```ts file=../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
+```ts file=../../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
 ```
 
-```ts file=../src/better/CounterInteractor.ts subtitle="С использованием DIP"
+```ts file=../../src/dip/CounterInteractor.ts subtitle="С использованием DIP"
 ```
 
 </Step>
 
 <Step title="Сравниваем бизнес-логику - сами счётчики">
 
-```ts 1,5 file=../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
+```ts 1,5 file=../../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
 ```
 
-```ts 5:9,14 file=../src/better/CounterInteractor.ts subtitle="С использованием принципа DIP"
+```ts 5:9,14 file=../../src/dip/CounterInteractor.ts subtitle="С использованием принципа DIP"
 ```
 
 </Step>
@@ -399,30 +399,30 @@ S O L I D
 
 <Step title="Сравниваем логгеры">
 
-```ts file=../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```ts file=../../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
 ```
 
-```ts file=../src/better/ConsoleLogger.ts subtitle="С использованием DIP"
-```
-
-</Step>
-
-<Step title="Сравниваем логгеры">
-
-```ts file=../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
-```
-
-```ts 1,3 file=../src/better/ConsoleLogger.ts subtitle="С использованием принципа DIP"
+```ts file=../../src/dip/ConsoleLogger.ts subtitle="С использованием DIP"
 ```
 
 </Step>
 
 <Step title="Сравниваем логгеры">
 
-```ts file=../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```ts file=../../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
 ```
 
-```ts 1,3[28:45] file=../src/better/ConsoleLogger.ts subtitle="С использованием принципа DIP"
+```ts 1,3 file=../../src/dip/ConsoleLogger.ts subtitle="С использованием принципа DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts 1,3[28:45] file=../../src/dip/ConsoleLogger.ts subtitle="С использованием принципа DIP"
 ```
 
 </Step>

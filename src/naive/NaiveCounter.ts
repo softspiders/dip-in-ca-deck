@@ -1,4 +1,4 @@
-import { ConsoleLogger } from "./ConsoleLogger";
+import { ConsoleLogger } from './ConsoleLogger'
 
 export class NaiveCounter {
   private count = 0
