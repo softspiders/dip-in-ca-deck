@@ -2,14 +2,14 @@ import DebugLogger from './DebugLogger'
 
 export default class DebugConsoleLogger implements DebugLogger {
   error(message: string): void {
-    console.error(message)
+    console.log(`ERROR\t${message}`)
   }
 
   info(message: string): void {
-    console.info(message)
+    console.log(`INFO\t${message}`)
   }
 
   debug(message: string): void {
-    console.log(message)
+    console.log(`DEBUG\t${message}`)
   }
 }

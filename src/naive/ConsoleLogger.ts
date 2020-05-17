@@ -1,13 +1,13 @@
 export class ConsoleLogger {
   trace(message: string): void {
-    console.log(message)
+    console.log(`TRACE\t${message}`)
   }
 
   info(message: string): void {
-    console.info(message)
+    console.log(`INFO\t${message}`)
   }
 
   error(message: string): void {
-    console.error(message)
+    console.log(`ERROR\t${message}`)
   }
 }
