@@ -241,22 +241,22 @@ S O L I D
 
 <CodeSurferColumns themes={[naiveTheme, naiveTheme]}>
 
-<Step subtitle="Наивная реализация журналирования">
+<Step subtitle="Наивная реализация">
 
 ```ts file=../src/naive/NaiveCounter.ts title="NaiveCounter"
 ```
 
-```ts file=../src/naive/NaiveLogger.ts title="NaiveLogger"
+```ts file=../src/naive/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
 
-<Step subtitle="Design-time-зависимость от реализации">
+<Step subtitle="Design-time-зависимость от класса ConsoleLogger">
 
 ```ts 1,5 file=../src/naive/NaiveCounter.ts title="NaiveCounter"
 ```
 
-```ts 1 file=../src/naive/NaiveLogger.ts title="NaiveLogger"
+```ts 1 file=../src/naive/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
@@ -339,7 +339,7 @@ S O L I D
 ```ts file=../../src/CounterInteractor.ts title="Чистая реализация счётчика" subtitle="Да"
 ```
 
-```ts file=../../src/ConsoleLogger.ts title="Некий библиотечный логгер" subtitle="Да"
+```ts file=../../src/DebugConsoleLogger.ts title="Некий библиотечный логгер" subtitle="Да"
 ```
 
 </Step>
