@@ -1,6 +1,6 @@
-import { LoggerDev } from "./LoggerDev";
+import DebugLogger from "./DebugLogger";
 
-export class ConsoleLogger implements LoggerDev {
+export default class DebugConsoleLogger implements DebugLogger {
   error(message: string): void {
     console.error(message)
   }

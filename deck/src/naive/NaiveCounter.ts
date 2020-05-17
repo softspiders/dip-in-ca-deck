@@ -1,8 +1,8 @@
-import { NaiveLogger } from "./NaiveLogger";
+import { ConsoleLogger } from "./ConsoleLogger";
 
 export class NaiveCounter {
   private count = 0
-  private logger = new NaiveLogger()
+  private logger = new ConsoleLogger()
 
   increment(): void {
     this.count++

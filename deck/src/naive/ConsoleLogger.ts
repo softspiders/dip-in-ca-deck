@@ -1,4 +1,4 @@
-export class NaiveLogger {
+export class ConsoleLogger {
   trace(message: string): void {
     console.log(message)
   }

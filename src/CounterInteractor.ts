@@ -8,7 +8,7 @@ export interface Logger {
   error(message: string): void
 }
 
-export class CounterInteractor implements Counter {
+export default class CounterInteractor implements Counter {
   private count: number = 0
 
   constructor(private loggerOut: Logger) {}
