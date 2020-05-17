@@ -7,6 +7,7 @@
     "build": "mdx-deck build deck/ru/deck.mdx",
     "start": "tsc && node dist/clean/index.js",
     "start-dip": "tsc && node dist/dip/index.js",
+    "start-dip-time": "tsc && node dist/dip/indexTime.js",
     "start-naive": "tsc && node dist/naive/index.js",
     "start-deck": "mdx-deck deck/ru/deck.mdx"
   },
