@@ -243,20 +243,20 @@ S O L I D
 
 <Step subtitle="Наивная реализация журналирования">
 
-```ts file=../src/naive/NaiveCounter.ts title="NaiveCounter.ts"
+```ts file=../src/naive/NaiveCounter.ts title="NaiveCounter"
 ```
 
-```ts file=../src/naive/NaiveLogger.ts title="NaiveLogger.ts"
+```ts file=../src/naive/NaiveLogger.ts title="NaiveLogger"
 ```
 
 </Step>
 
 <Step subtitle="Design-time-зависимость от реализации">
 
-```ts 1,5 file=../src/naive/NaiveCounter.ts title="NaiveCounter.ts"
+```ts 1,5 file=../src/naive/NaiveCounter.ts title="NaiveCounter"
 ```
 
-```ts 1 file=../src/naive/NaiveLogger.ts title="NaiveLogger.ts"
+```ts 1 file=../src/naive/NaiveLogger.ts title="NaiveLogger"
 ```
 
 </Step>
@@ -288,9 +288,9 @@ S O L I D
 
 ---
 
-<CodeSurferColumns themes={[naiveTheme, naiveTheme]}>
+<CodeSurferColumns themes={[myTheme, myTheme]}>
 
-<Step subtitle="Реализация с использованием DIP">
+<Step subtitle="Реализация с использованием принципа Dependency Inversion">
 
 ```ts file=../src/better/CounterInteractor.ts title="CounterInteractor"
 ```
@@ -306,6 +306,16 @@ S O L I D
 ```
 
 ```ts 1,3 file=../src/better/LoggerImpl.ts title="LoggerImpl"
+```
+
+</Step>
+
+<Step subtitle="Инъекция зависимости через конструктор">
+
+```ts 4 file=../src/better/index.ts title="index"
+```
+
+```ts 14 file=../src/better/CounterInteractor.ts title="CounterInteractor"
 ```
 
 </Step>
