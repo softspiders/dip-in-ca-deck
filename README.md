@@ -26,23 +26,6 @@
 
 ---
 
-## Running locally
-
-TBD
-
-## Run tests
-
-```sh
-npm run test
-```
-
-test with coverage:
-```sh
-npm run test:coverage
-```
-
----
-
 ## License
 
 Licensed under the [MIT license](./LICENSE).
