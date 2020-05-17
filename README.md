@@ -2,18 +2,14 @@
 
 ## Counter-app starter in TypeScript that follows Clean Architecture principles
 
-UNDER DEVELOPMENT
-
 ---
 
 ## Feature tags
 - clean-architecture
 - counter-app
-- jest
+- dependency-inversion
 - starter
-- test-coverage
 - typescript
-- unit-test
 
 ---
 
