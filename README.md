@@ -1,6 +1,6 @@
 [SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
-## Presentation of Counter-app in TypeScript that follows Clean Architecture principles
+## Counter-app presentation showing how to apply the dependency inversion principle
 
 ---
 
