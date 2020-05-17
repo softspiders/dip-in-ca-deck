@@ -1,6 +1,6 @@
 import { Logger } from "./CounterInteractor";
 
-export class TimeLoggerImpl implements Logger {
+export class TimeConsoleLogger implements Logger {
   error(message: string): void {
     const timestamp = () => `[${new Date().toUTCString()}]`
     console.error(timestamp(), message)

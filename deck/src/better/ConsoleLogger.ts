@@ -1,6 +1,6 @@
 import { Logger } from "./CounterInteractor";
 
-export class LoggerImpl implements Logger {
+export class ConsoleLogger implements Logger {
   error(message: string): void {
     console.error(message)
   }
