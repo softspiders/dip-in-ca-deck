@@ -1,6 +1,6 @@
 [SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
-## Counter-app starter in TypeScript that follows Clean Architecture principles
+## Presentation of Counter-app in TypeScript that follows Clean Architecture principles
 
 ---
 
