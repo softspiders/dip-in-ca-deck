@@ -1,0 +1,448 @@
+import { Image, Notes, Head } from "mdx-deck";
+
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+
+import {
+  vsDark as naiveTheme,
+  nightOwl as smartTheme
+} from "@code-surfer/themes"
+
+
+import myTheme from './lib/theme'
+export const theme = myTheme
+//export const theme = smartTheme;
+
+import naive from "./diagrams/naive.svg";
+import naive1 from "./diagrams/naive1.svg";
+import naive2 from "./diagrams/naive2.svg";
+import naive3 from "./diagrams/naive3.svg";
+
+
+<Head>
+  <title>Принцип Инверсии Зависимостей</title>
+</Head>
+
+# Презентация презентации
+
+<Notes>
+
+Вначале немного о самой презентации
+
+Что хотелось попробовать ?
+
+- Легальную разработку и публикацию презентаций вне корпоративной среды:
+  - разработка презентации исключительно на инструментах Open Source (mdx-deck, code-surfer, draw.io)
+- постоянную доступность презентаций онлайн, в том числе в режиме просмотра speaker notes - заметок докладчика
+
+...
+</Notes>
+
+---
+
+# Новые жанры
+
+<Notes>
+...
+
+А вообще складывается впечатление, что в последнее время понемногу формируются новые комбинированные жанры представления
+информации, такие как видео + слайды, текст + видео (публикации такого формата теперь часто появляются на habr).
+
+В данном случае делается попытка попробовать ещё один гибридный вариант информационного продукта: *презентация + текст*.
+
+Этот вариант предполагает, что презентация должна обладать определённой степенью самодостаточности для того, чтобы её
+можно было полноценно воспринимать даже при отсутствии докладчика.
+
+Эта возможность обеспечивается тем, что презентация публикуется в виде "слайды + заметки докладчика", где заметки
+докладчика представлены не короткими подсказками, как это обычно бывает, а гораздо более литературным текстом (насколько
+автор мог сделать его таковым), пригодным для восприятия не только автором презентации, но и широким кругом читателей.
+
+...
+</Notes>
+
+---
+
+### Для подготовки использовались инструменты:
+
+- [mdx-deck](https://github.com/jxnblk/mdx-deck)
+- [code-surfer](https://github.com/pomber/code-surfer)
+- [drawio](https://github.com/jgraph/drawio)
+
+<Notes>
+
+Кратко об используемых инструментах:
+- *MDX-DECK* - среда разработки презентаций на markdown + React (сама mdx-deck реализована на React)
+- *Code Surfer* - своего рода плагин для mdx-deck, позволяющий красиво демонстрировать фрагменты кода
+- *Draw.io* - продукт проекта diagrams.net, позволяющий бесплатно, в том числе на desktop и в онлайн, создавать
+необходимые диаграммы.
+
+В последующих докладах (до тех пор, пока не появится что-то лучшее) для подготовки презентаций предполагается
+использовать именно этот набор инструментов.
+
+</Notes>
+
+---
+
+# Режим докладчика
+
+- *Alt+P* - на Windows
+- *Option+P* - на Mac
+
+<Notes>
+...
+Эту презентацию можно будет повторно пересмотреть-перечитать в режиме докладчика, при котором одномоментно виден и
+слайд, и сопровождающий его текст.
+
+Режим докладчика включается комбинацией клавиш *Alt+P* - на Windows и *Option+P* - на Mac.
+
+</Notes>
+
+---
+
+# Презентация-стартер
+
+<Notes>
+
+Слайд можно понимать в двух смыслах: и как стартер презентации, и как стартер DIP-CA-решения.
+
+</Notes>
+
+---
+
+# ЕЩЁ РАЗ 
+
+---
+
+# О ПРИНЦИПЕ
+# ИНВЕРСИИ ЗАВИСИМОСТЕЙ
+
+<Notes>
+...
+
+Этот принцип изложен на бесчисленном числе сетевых и прочих ресурсов.
+
+Но по достоинству до сих пор так и не оценён.
+
+Сделаем попытку это исправить.
+
+...
+</Notes>
+
+---
+
+# Вы узнаете
+
+<Notes>
+
+Какова целевая аудитория у этой презентации ?
+Из этой презентации вы узнаете ...
+
+</Notes>
+
+---
+
+- В чём суть инверсии
+
+---
+
+- В чём суть инверсии
+- При чём здесь Чистая Архитектура
+
+---
+
+- В чём суть инверсии
+- При чём здесь Чистая Архитектура
+- Как это выглядит на TypeScript
+---
+
+- В чём суть инверсии
+- При чём здесь Чистая Архитектура
+- Как это выглядит на TypeScript
+- Как это выглядит на UML
+
+---
+
+- В чём суть инверсии
+- При чём здесь Чистая Архитектура
+- Как это выглядит на TypeScript
+- Как это выглядит на UML
+- Все ли зависимости стоит инвертировать
+
+---
+
+- В чём суть инверсии
+- При чём здесь Чистая Архитектура
+- Как это выглядит на TypeScript
+- Как это выглядит на UML
+- Все ли зависимости стоит инвертировать
+- Как устроены плагины
+
+---
+
+<p style="font-size: 200px; text-align:left; font-weight:bold; padding:100px;">
+S O L I D
+</p>
+
+<Notes>
+
+Начнём с принципов SOLID.
+
+</Notes>
+
+---
+
+<p style="font-size: 70px; text-align:left; padding:100px;">
+    <i>"Использование принципов SOLID способствует созданию такой программной системы, которую будет легко поддерживать и расширять в течение долгого времени."</i>
+    <p style="font-size: 50px; text-align:right; color:#addb67;">Из Википедии</p>
+</p>
+
+<Notes>
+
+Почему для нас так важен именно SOLID ?
+
+По сути принципы SOLID являются принципами *Чистой Архитектуры*.
+
+В тех случаях, когда требуется создать долгоживущий проект с устойчивым развитием, следование этим принципам необходимо. 
+
+При разработке корпоративного ПО такое качество, как способность к устойчивому развитию является одним из главных
+приоритетов.
+
+</Notes>
+
+---
+
+- **S**ingle Responsibility Principle (SRP)
+
+- **O**pen-Closed Principle (OCP)
+
+- **L**iskov Substitution Principle (LCP)
+
+- **I**nterface Segregation Principle (ICP)
+
+- **D**ependency Inversion Principle (DIP)
+
+<Notes>
+Как известно, SOLID это аббревиатура, в которой каждой букве соответствует один из пяти принципов.
+</Notes>
+
+---
+
+- **S**ingle Responsibility Principle (SRP)
+
+- **O**pen-Closed Principle (OCP)
+
+- **L**iskov Substitution Principle (LCP)
+
+- **I**nterface Segregation Principle (ICP)
+
+- **Dependency Inversion Principle** (**DIP**)
+
+<Notes>
+Сегодня будем говорить о принципе, обозначенном буквой - 'D', но который, несмотря на своё последнее место, для Чистой
+Архитектуры, пожалуй, является одним из главных.
+
+Как говорится, "The last but not the least".
+
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, naiveTheme]}>
+
+<Step subtitle="Наивная реализация">
+
+```ts file=../../src/naive/NaiveCounter.ts title="NaiveCounter"
+```
+
+```ts file=../../src/naive/ConsoleLogger.ts title="ConsoleLogger"
+```
+
+</Step>
+
+<Step subtitle="Design-time-зависимость от класса ConsoleLogger">
+
+```ts 1,5 file=../../src/naive/NaiveCounter.ts title="NaiveCounter"
+```
+
+```ts 1 file=../../src/naive/ConsoleLogger.ts title="ConsoleLogger"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<Image src={naive} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={naive1} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={naive2} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={naive3} style={{ width: '100vw', height: '100vh'}}/>
+
+<Notes>
+
+Отметим, что Design-time-зависимость всегда означает и run-time-зависимость, но обратное неверно, как дальше будет
+показано. 
+
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[myTheme, myTheme]}>
+
+<Step subtitle="Реализация с использованием принципа Dependency Inversion">
+
+```ts file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
+```
+
+```ts file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
+```
+
+</Step>
+
+<Step subtitle="Присутствует только run-time-зависимость">
+
+```ts 5:9,14,18 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
+```
+
+```ts 1,3 file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
+```
+
+</Step>
+
+<Step subtitle="Инъекция зависимости через конструктор">
+
+```ts 4 file=../../src/dip/index.ts title="index"
+```
+
+```ts 14 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+<Notes>
+...
+
+Нужно поподробнее и с картинками
+
+...
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
+
+<Step title="Сравниваем использование: модули index.ts">
+
+```ts file=../../src/naive/index.ts subtitle="Наивная реализация"
+```
+
+```ts file=../../src/dip/index.ts subtitle="С использованием DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем использование: модули index.ts">
+
+```ts 3 file=../../src/naive/index.ts subtitle="Наивная реализация"
+```
+
+```ts 2,4 file=../../src/dip/index.ts subtitle="С использованием DIP"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
+
+<Step title="Сравниваем бизнес-логику - сами счётчики">
+
+```ts file=../../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
+```
+
+```ts file=../../src/dip/CounterInteractor.ts subtitle="С использованием DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем бизнес-логику - сами счётчики">
+
+```ts 1,5 file=../../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
+```
+
+```ts 5:9,14 file=../../src/dip/CounterInteractor.ts subtitle="С использованием принципа DIP"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts file=../../src/dip/ConsoleLogger.ts subtitle="С использованием DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts 1,3 file=../../src/dip/ConsoleLogger.ts subtitle="С использованием принципа DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts 1,3[28:45] file=../../src/dip/ConsoleLogger.ts subtitle="С использованием принципа DIP"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+# Точки расширения
+
+---
+
+# Плагины
+
+
+---
+
+# СПАСИБО ЗА ВНИМАНИЕ!
+
+---
+
+# Исходники
+
+[https://github.com/softspiders/dip-in-ca](https://github.com/softspiders/dip-in-ca)

@@ -1,20 +1,17 @@
 [SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
-## Counter-app starter in TypeScript that follows Clean Architecture principles
-
-UNDER DEVELOPMENT
+## Presentation of the simplest counter application showing how to apply the Dependency Inversion Principle
 
 ---
 
 ## Feature tags
+- adapter
 - clean-architecture
 - counter-app
-- jest
+- dependency-inversion
 - ss-deck
 - starter
-- test-coverage
 - typescript
-- unit-test
 
 ---
 
@@ -22,13 +19,7 @@ UNDER DEVELOPMENT
 [**+ db, fullstack, jest, jest-fetch-mock, json-server, react, react-hooks, react-testing-library, rest**](https://github.com/softspiders/cleanarchitecture-react-fullstack-starter)
 
 ---
-## Demo
-Demo and server are both hosted on the *Codesandbox*.
 
-In separate browser tabs do:
-TBD
-
----
 ## Author
 
 [Alexander Lapygin](https://github.com/AlexanderLapygin) <<alexanderlapygin@gmail.com>>

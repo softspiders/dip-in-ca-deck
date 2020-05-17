@@ -4,6 +4,7 @@
     "module": "commonjs",
     "lib": ["es6", "dom"],
     "outDir": "dist",
-    "strict": true,
-  }
+    "strict": true
+  },
+  "include": ["src/naive/**/*", "src/dip/**/*", "src/clean/**/*"]
 }

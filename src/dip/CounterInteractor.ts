@@ -11,11 +11,11 @@ export interface Logger {
 export class CounterInteractor implements Counter {
   private count: number = 0
 
-  constructor(private loggerOut: Logger) {}
+  constructor(private logger: Logger) {}
 
   increment(): void {
     this.count++
-    this.loggerOut.trace(`count = ${this.count}`)
+    this.logger.trace(`count = ${this.count}`)
   }
 
 }

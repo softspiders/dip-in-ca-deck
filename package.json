@@ -1,15 +1,18 @@
 {
+  "name": "dip-in-ca-deck",
   "private": true,
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {
-    "build": "mdx-deck build deck.mdx",
-    "start": "tsc && node dist/index.js",
-    "start-deck": "mdx-deck deck.mdx"
+    "build": "mdx-deck build deck/ru/deck.mdx",
+    "start": "tsc && node dist/clean/index.js",
+    "start-dip": "tsc && node dist/dip/index.js",
+    "start-dip-time": "tsc && node dist/dip/indexTime.js",
+    "start-naive": "tsc && node dist/naive/index.js",
+    "start-deck": "mdx-deck deck/ru/deck.mdx"
   },
   "devDependencies": {
     "code-surfer": "3.1.1",
     "mdx-deck": "3.0.10"
-  },
-  "name": "ca-ts-starter"
+  }
 }

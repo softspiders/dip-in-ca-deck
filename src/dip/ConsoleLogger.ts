@@ -1,6 +1,6 @@
-import { LoggerDev } from "./LoggerDev";
+import { Logger } from './CounterInteractor'
 
-export class ConsoleLogger implements LoggerDev {
+export class ConsoleLogger implements Logger {
   error(message: string): void {
     console.error(message)
   }
@@ -9,7 +9,8 @@ export class ConsoleLogger implements LoggerDev {
     console.info(message)
   }
 
-  debug(message: string): void {
+  trace(message: string): void {
     console.log(message)
   }
+
 }
