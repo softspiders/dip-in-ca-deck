@@ -105,7 +105,9 @@ import naive3 from "./diagrams/naive3.svg";
 # Презентация-стартер
 
 <Notes>
-...
+
+Слайд можно понимать в двух смыслах: и как стартер презентации, и как стартер DIP-CA-решения.
+
 </Notes>
 
 ---
@@ -343,22 +345,22 @@ S O L I D
 
 <CodeSurferColumns themes={[naiveTheme, myTheme]}>
 
-<Step subtitle="Сравниваем использование: модули index.ts">
+<Step title="Сравниваем использование: модули index.ts">
 
-```ts file=../src/naive/index.ts title="Наивная реализация"
+```ts file=../src/naive/index.ts subtitle="Наивная реализация"
 ```
 
-```ts file=../src/better/index.ts title="С использованием принципа Dependency Inversion"
+```ts file=../src/better/index.ts subtitle="С использованием DIP"
 ```
 
 </Step>
 
-<Step subtitle="Сравниваем использование: модули index.ts">
+<Step title="Сравниваем использование: модули index.ts">
 
-```ts 3 file=../src/naive/index.ts title="Наивная реализация"
+```ts 3 file=../src/naive/index.ts subtitle="Наивная реализация"
 ```
 
-```ts 2,4 file=../src/better/index.ts title="С использованием принципа Dependency Inversion"
+```ts 2,4 file=../src/better/index.ts subtitle="С использованием DIP"
 ```
 
 </Step>
@@ -369,22 +371,58 @@ S O L I D
 
 <CodeSurferColumns themes={[naiveTheme, myTheme]}>
 
-<Step subtitle="Сравниваем бизнес-логику">
+<Step title="Сравниваем бизнес-логику - сами счётчики">
 
-```ts file=../src/naive/NaiveCounter.ts title="Наивная реализация" subtitle="NaiveCounter"
+```ts file=../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
 ```
 
-```ts file=../src/better/CounterInteractor.ts title="С использованием принципа Dependency Inversion" subtitle="CounterInteractor"
+```ts file=../src/better/CounterInteractor.ts subtitle="С использованием DIP"
 ```
 
 </Step>
 
-<Step subtitle="Сравниваем бизнес-логику">
+<Step title="Сравниваем бизнес-логику - сами счётчики">
 
-```ts 3 file=../src/naive/index.ts title="Наивная реализация"
+```ts 1,5 file=../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
 ```
 
-```ts 2,4 file=../src/better/index.ts title="С использованием принципа Dependency Inversion"
+```ts 5:9,14 file=../src/better/CounterInteractor.ts subtitle="С использованием принципа DIP"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts file=../src/better/ConsoleLogger.ts subtitle="С использованием DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts 1,3 file=../src/better/ConsoleLogger.ts subtitle="С использованием принципа DIP"
+```
+
+</Step>
+
+<Step title="Сравниваем логгеры">
+
+```ts file=../src/naive/ConsoleLogger.ts subtitle="Наивная реализация"
+```
+
+```ts 1,3[28:45] file=../src/better/ConsoleLogger.ts subtitle="С использованием принципа DIP"
 ```
 
 </Step>
