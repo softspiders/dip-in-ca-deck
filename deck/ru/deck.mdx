@@ -17,7 +17,9 @@ export const theme = myTheme
 //export const theme = smartTheme;
 
 import naive from "./diagrams/naive.svg";
-
+import naive1 from "./diagrams/naive1.svg";
+import naive2 from "./diagrams/naive2.svg";
+import naive3 from "./diagrams/naive3.svg";
 
 
 <Head>
@@ -229,25 +231,49 @@ S O L I D
 
 ---
 
-<Image src={naive}
-    style={{
-      width: '100vw',
-      height: '100vh',
-}}/>
+<CodeSurferColumns themes={[naiveTheme, naiveTheme]}>
 
----
+<Step subtitle="Наивная реализация журналирования">
 
-<CodeSurfer theme={smartTheme}>
-
-
-```ts file=../../src/CounterInteractor.ts title="Чистая бизнес-логика" subtitle="Да"
+```ts file=../src/naive/NaiveCounter.ts title="NaiveCounter.ts"
 ```
 
-</CodeSurfer>
+```ts file=../src/naive/NaiveLogger.ts title="NaiveLogger.ts"
+```
+
+</Step>
+
+<Step subtitle="Design-time-зависимость от реализации">
+
+```ts 1,5 file=../src/naive/NaiveCounter.ts title="NaiveCounter.ts"
+```
+
+```ts 1 file=../src/naive/NaiveLogger.ts title="NaiveLogger.ts"
+```
+
+</Step>
+
+</CodeSurferColumns>
 
 ---
 
-<CodeSurferColumns themes={[smartTheme, smartTheme]}>
+<Image src={naive} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={naive1} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={naive2} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={naive3} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<CodeSurferColumns themes={[myTheme, myTheme]}>
 
 <Step>
 
