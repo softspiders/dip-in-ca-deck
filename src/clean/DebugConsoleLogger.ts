@@ -1,4 +1,4 @@
-import DebugLogger from "./DebugLogger";
+import DebugLogger from './DebugLogger'
 
 export default class DebugConsoleLogger implements DebugLogger {
   error(message: string): void {

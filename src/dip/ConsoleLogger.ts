@@ -1,4 +1,4 @@
-import { Logger } from "./CounterInteractor";
+import { Logger } from './CounterInteractor'
 
 export class ConsoleLogger implements Logger {
   error(message: string): void {

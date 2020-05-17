@@ -1,4 +1,4 @@
-import { NaiveCounter } from "./NaiveCounter";
+import { NaiveCounter } from './NaiveCounter'
 
 const counter = new NaiveCounter()
 

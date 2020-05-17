@@ -1,13 +1,13 @@
 [SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
-## Presentation of the simplest logger application showing how to apply the dependency inversion principle
+## Presentation of the simplest counter application showing how to apply the dependency inversion principle
 
 ---
 
 ## Feature tags
 - adapter
 - clean-architecture
-- logger-app
+- counter-app
 - dependency-inversion
 - ss-deck
 - starter
