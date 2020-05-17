@@ -1,6 +1,6 @@
 [SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
-## Presentation of the simplest counter application showing how to apply the dependency inversion principle
+## Presentation of the simplest counter application showing how to apply the Dependency Inversion Principle
 
 ---
 
