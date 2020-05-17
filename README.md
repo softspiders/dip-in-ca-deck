@@ -10,7 +10,7 @@
 - counter-app
 - dependency-inversion
 - ss-deck
-- starter
+- template
 - typescript
 
 ---
@@ -23,23 +23,6 @@
 ## Author
 
 [Alexander Lapygin](https://github.com/AlexanderLapygin) <<alexanderlapygin@gmail.com>>
-
----
-
-## Running locally
-
-TBD
-
-## Run tests
-
-```sh
-npm run test
-```
-
-test with coverage:
-```sh
-npm run test:coverage
-```
 
 ---
 
