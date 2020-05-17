@@ -10,7 +10,7 @@
 - counter-app
 - dependency-inversion
 - ss-deck
-- starter
+- template
 - typescript
 
 ---
