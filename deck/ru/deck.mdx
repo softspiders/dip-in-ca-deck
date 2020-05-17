@@ -17,11 +17,11 @@ export const theme = myTheme
 //export const theme = smartTheme;
 
 import counterWithLogger from "./diagrams/counterWithLogger.svg";
+
 import naive from "./diagrams/naive.svg";
 import naive1 from "./diagrams/naive1.svg";
 import naive2 from "./diagrams/naive2.svg";
 import naive3 from "./diagrams/naive3.svg";
-
 
 <Head>
   <title>Принцип Инверсии Зависимостей</title>
@@ -473,18 +473,36 @@ S O L I D
 </CodeSurferColumns>
 
 <Notes>
-Что такое выходной интерфейс ?
+Что такое *требуемый интерфейс* ?
 ...
 </Notes>
 
 ---
-# Что такое *выходной интерфейс*?
+# Что такое *требуемый интерфейс*?
 
 
 <Notes>
-Что такое выходной интерфейс ?
-TBD
+Что такое *требуемый интерфейс* ?
 </Notes>
+
+---
+<CodeSurferColumns themes={[myTheme, myTheme]}>
+
+<Step title="Требуемый интерфейс">
+
+<Image align="middle" src="https://martinfowler.com/bliki/images/requiredInterface/requiredInterface_sketch.png" style={{ width: '40vw', height: '40vh', align: 'right' }}/>
+
+<p style="font-size: 40px; text-align:left; padding:100px;">
+    <i>
+        A <b>required interface</b> is an interface that is defined by the client of an interaction that specifies what a
+        supplier component needs to do so that it can be used in that interaction.
+    </i>
+    <p style="font-size: 50px; text-align:right; color:#addb67;">Martin Fowler</p>
+</p>
+
+</Step>
+
+</CodeSurferColumns>
 
 ---
 
@@ -509,6 +527,7 @@ TBD
 
 ...
 </Notes>
+
 
 ---
 
