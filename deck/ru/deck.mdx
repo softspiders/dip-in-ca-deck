@@ -487,6 +487,10 @@ S O L I D
 </Notes>
 
 ---
+
+# Ну и где здесь инверсия?
+
+---
 # Что такое *требуемый интерфейс*?
 
 
@@ -551,12 +555,29 @@ Call(run-time)-зависимости.
 <Notes>
 ...
 
-Требуемый интерфейс не обязательно должен принадлежать *вызывающему* модулю. Он может быть внешним, например,
-определяться каким-то стандартом.  
+Требуемый интерфейс не обязательно должен принадлежать вызывающему, требующему реализацию интерфейса модулю. Он может
+быть и внешним, например, когда он определяется каким-то стандартом.
 
 В таких случаях говорят, что оба модуля, и вызывающий, и реализующий, зависят от одной и той же абстракции.   
+
+И, кстати, в данном случае здесь не просматривается какой-либо "инверсии", что в частности, говорит о том, что название
+принципа DIP не вполне отражает его суть.
  
 </Notes>
+
+---
+
+<p style="font-size: 50px; text-align:left; padding:100px;">
+    <i>
+    One might question why I use the word “inversion”. Frankly, it is because more traditional software development
+    methods, such as Structured Analysis and Design, tend to create software structures in which high level modules
+    depend upon low level modules, and in which abstractions depend upon details. Indeed one of the goals of these
+    methods is to define the subprogram hierarchy that describes how the high level modules make calls to the low level
+    modules. ... Thus, the dependency structure of a well designed object oriented program is “inverted” with respect to
+    the dependency structure that normally results from traditional procedural methods.
+    </i>
+    <p style="font-size: 50px; text-align:right; color:#addb67;">Robert C Martin</p>
+</p>
 
 ---
 
