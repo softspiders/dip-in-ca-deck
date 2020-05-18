@@ -23,6 +23,7 @@ import naive1 from "./diagrams/naive1.svg";
 import naive2 from "./diagrams/naive2.svg";
 import naive3 from "./diagrams/naive3.svg";
 import requiredInterface from "./diagrams/requiredInterface.svg";
+import requiredInterface0 from "./diagrams/requiredInterface0.svg";
 import requiredInterface1 from "./diagrams/requiredInterface1.svg";
 import requiredInterface2 from "./diagrams/requiredInterface2.svg";
 
@@ -139,11 +140,11 @@ Inversion*.
 Но, надеюсь, презентация будет интересна существенно большему кругу "зрителей", поскольку в ней затрагиваются и другие
 интересные на взгляд автора вопросы.
 
-Кто-то наверняка скажет или подумает, что некоторые детали предлагаемой "разжёвываются" больше, чем нужно.
+Кто-то, конечно, скажет или подумает, что некоторые детали предлагаемой "разжёвываются" больше, чем нужно.
 Да, для кого-то это определённо так, но и предлагаемый уровень детализации наверняка тоже кому-то может пригодиться. 
 
-Примеры приводятся на TypeScript, но они без сомнения также будут понятны и разработчикам на Java, на C#, и на прочих
-ООП-языках, имеющих понятие интерфейса. 
+Примеры приводятся на TypeScript, но они без сомнения также будут понятны разработчикам на Java, на C#, и на прочих
+языках, имеющих понятие интерфейса. 
 
 ...
 </Notes>
@@ -490,13 +491,15 @@ S O L I D
 
 
 <Notes>
-Что такое *требуемый интерфейс* ?
+
+Что такое *требуемый (required) интерфейс* ?
+
 </Notes>
 
 ---
 <CodeSurferColumns themes={[myTheme, myTheme]}>
 
-<Step title="Требуемый интерфейс">
+<Step title="Требуемый (required) интерфейс">
 
 <Image align="middle" src="https://martinfowler.com/bliki/images/requiredInterface/requiredInterface_sketch.png" style={{ width: '40vw', height: '40vh', align: 'right' }}/>
 
@@ -516,22 +519,42 @@ S O L I D
 
 <Image src={requiredInterface} style={{ width: '100vw', height: '100vh'}}/>
 
+<Notes>
+
+Модуль, вызывающий методы интерфейса и модуль, реализующий интерфейс, для краткости назовём, соответственно,
+*вызывающим* и *реализующим*.
+
+... 
+</Notes>
+
 ---
 
 <Image src={requiredInterface1} style={{ width: '100vw', height: '100vh'}}/>
 
 ---
 
-<Image src={requiredInterface2} style={{ width: '100vw', height: '100vh'}}/>
+<Image src={requiredInterface0} style={{ width: '100vw', height: '100vh'}}/>
 
 <Notes>
 
-Модуль, вызывающий методы интерфейса и модуль, реализующий интерфейс, для краткости назовём, соответственно,
-*вызывающим* и *реализующим*.
+Этот слайд отвечает на вопрос, а в чём, собственно, инверсия, что именно инвертируется ?
+
+Так вот на слайде видно, что направление Know(design-time)-зависимости инвертировано относительно
+Call(run-time)-зависимости.
+ 
+</Notes>
+
+---
+
+<Image src={requiredInterface2} style={{ width: '100vw', height: '100vh'}}/>
+
+<Notes>
+...
 
 Требуемый интерфейс не обязательно должен принадлежать *вызывающему* модулю. Он может быть внешним, например,
 определяться каким-то стандартом.  
-В таких случаях говорят, что оба модуля - вызывающий и реализующий - зависят от одной и той же абстракции.   
+
+В таких случаях говорят, что оба модуля, и вызывающий, и реализующий, зависят от одной и той же абстракции.   
  
 </Notes>
 
