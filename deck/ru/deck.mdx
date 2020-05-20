@@ -444,7 +444,8 @@ design-time-зависимости.
 
 Понятие интерфейса является, наверное, одним из наиболее значимых в современном программировании.
 
-Сегодня оно широко известно, интерфейсы повсюду используются, поэтому не будем здесь на этом подробно останавливаться.
+Хотя интерфейсы возникли не так уж давно, например, в C++ их ещё не было, сегодня они повсюду используются, поэтому не
+будем здесь на этом подробно останавливаться.
 
 ... 
 </Notes>
@@ -478,15 +479,26 @@ design-time-зависимости.
 
 <p style="font-size: 50px; text-align:left; padding:100px;">
     <i>
-    One might question why I use the word “inversion”. Frankly, it is because more traditional software development
-    methods, such as Structured Analysis and Design, tend to create software structures in which high level modules
-    depend upon low level modules, and in which abstractions depend upon details. Indeed one of the goals of these
-    methods is to define the subprogram hierarchy that describes how the high level modules make calls to the low level
-    modules. ... Thus, the dependency structure of a well designed object oriented program is “inverted” with respect to
-    the dependency structure that normally results from traditional procedural methods.
+    Может возникнуть вопрос, почему я использую слово “инверсия”. Откровенно говоря, это связано с тем, что более
+    традиционные методы разработки программного обеспечения ..., как правило, создают программные структуры, в которых
+    модули высокого уровня зависят от модулей низкого уровня, а абстракции зависят от деталей..., модули высокого уровня
+    вызывают модули низкого уровня. ... Таким образом, структура зависимостей хорошо разработанной ... программы
+    является “инвертированной” по отношению к структуре зависимостей, которая обычно является результатом традиционных
+    процедурных методов.
     </i>
-    <p style="font-size: 50px; text-align:right; color:#addb67;">Robert C Martin</p>
+    <p style="font-size: 50px; text-align:right; color:#addb67;">Роберт Мартин</p>
 </p>
+
+<Notes>
+
+В этой пространной цитате Мартин объясняет, почему он всё-таки использует понятие инверсии. 
+
+То, что он называет "традиционными методами разработки" мы только что видели в уже приведённом примере.
+И там не было никакой инверсии.
+
+Теперь покажем пример, в котором инверсия присутствует буквально.
+
+</Notes>
 
 ---
 
@@ -494,7 +506,9 @@ design-time-зависимости.
 
 <Notes>
 
-Что такое *требуемый (required) интерфейс* ?
+Но вначале поговорим о *требуемых интерфейсах* (на английском - required interface).
+
+Что такое *требуемый интерфейс* ?
 
 </Notes>
 
