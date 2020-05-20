@@ -447,7 +447,123 @@ run-time-зависимость, но, как дальше будет показ
 
 В таких случаях говорят, что оба модуля, и вызывающий, и реализующий, зависят от одной и той же абстракции.   
 
+Такой способ устранения/предотвращения зависимости относится к принципу *Инверсии Зависимостей*.
+
 ... 
+</Notes>
+
+---
+
+# Ну и где здесь инверсия?
+
+<Notes>
+
+Ну и где здесь инверсия, спросите вы?
+
+И будете правы. Это, как говорится, очень хороший вопрос.
+
+</Notes>
+
+---
+
+<p style="font-size: 50px; text-align:left; padding:100px;">
+    <i>
+    One might question why I use the word “inversion”. Frankly, it is because more traditional software development
+    methods, such as Structured Analysis and Design, tend to create software structures in which high level modules
+    depend upon low level modules, and in which abstractions depend upon details. Indeed one of the goals of these
+    methods is to define the subprogram hierarchy that describes how the high level modules make calls to the low level
+    modules. ... Thus, the dependency structure of a well designed object oriented program is “inverted” with respect to
+    the dependency structure that normally results from traditional procedural methods.
+    </i>
+    <p style="font-size: 50px; text-align:right; color:#addb67;">Robert C Martin</p>
+</p>
+
+---
+
+## Поговорим о *требуемых интерфейсах*
+
+<Notes>
+
+Что такое *требуемый (required) интерфейс* ?
+
+</Notes>
+
+---
+<CodeSurferColumns themes={[myTheme, myTheme]}>
+
+<Step title="Требуемый (required) интерфейс">
+
+<Image align="middle" src="https://martinfowler.com/bliki/images/requiredInterface/requiredInterface_sketch.png" style={{ width: '40vw', height: '40vh', align: 'right' }}/>
+
+<p style="font-size: 40px; text-align:left; padding:100px;">
+    <i>
+        A <b>required interface</b> is an interface that is defined by the client of an interaction that specifies what a
+        supplier component needs to do so that it can be used in that interaction.
+    </i>
+    <p style="font-size: 50px; text-align:right; color:#addb67;">Martin Fowler</p>
+</p>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<Image src={requiredInterface} style={{ width: '100vw', height: '100vh'}}/>
+
+<Notes>
+
+Модуль, вызывающий методы интерфейса и модуль, реализующий интерфейс, для краткости назовём, соответственно,
+*вызывающим* и *реализующим*.
+
+... 
+</Notes>
+
+---
+
+<Image src={requiredInterface1} style={{ width: '100vw', height: '100vh'}}/>
+
+---
+
+<Image src={requiredInterface0} style={{ width: '100vw', height: '100vh'}}/>
+
+<Notes>
+
+Этот слайд отвечает на вопрос, а в чём, собственно, инверсия, что именно инвертируется ?
+
+Так вот на слайде видно, что направление import(design-time)-зависимости инвертировано относительно
+call(run-time)-зависимости.
+ 
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[myTheme, myTheme]}>
+
+<Step>
+
+```ts 5:9,14,18 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
+```
+
+```ts 1,3 file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+<Notes>
+...
+
+Как это выглядит в TypeScript ?
+Вернёмся к нашему коду.
+
+Здесь *CounterInteractor* играет роль *InterfaceRequirer*-а, причём требуемый интерфейс - *Logger* - определяется в теле
+*CounterInteractor*-а, а значит *Инверсия Зависимости* здесь присутствует.
+ 
+*ConsoleLogger* играет роль *InterfaceImplementer*-а - модуля, реализующего требуемый интерфейс. 
+
+...
 </Notes>
 
 ---
@@ -600,106 +716,6 @@ run-time-зависимость, но, как дальше будет показ
 
 ---
 
-# Ну и где здесь инверсия?
-
-<Notes>
-
-Ну и где здесь инверсия, спросите вы?
-
-И будете правы. Это, как говорится, очень хороший вопрос.
-
-</Notes>
-
----
-
-## Поговорим о *требуемых интерфейсах*
-
-<Notes>
-
-Что такое *требуемый (required) интерфейс* ?
-
-</Notes>
-
----
-<CodeSurferColumns themes={[myTheme, myTheme]}>
-
-<Step title="Требуемый (required) интерфейс">
-
-<Image align="middle" src="https://martinfowler.com/bliki/images/requiredInterface/requiredInterface_sketch.png" style={{ width: '40vw', height: '40vh', align: 'right' }}/>
-
-<p style="font-size: 40px; text-align:left; padding:100px;">
-    <i>
-        A <b>required interface</b> is an interface that is defined by the client of an interaction that specifies what a
-        supplier component needs to do so that it can be used in that interaction.
-    </i>
-    <p style="font-size: 50px; text-align:right; color:#addb67;">Martin Fowler</p>
-</p>
-
-</Step>
-
-</CodeSurferColumns>
-
----
-
-<Image src={requiredInterface} style={{ width: '100vw', height: '100vh'}}/>
-
-<Notes>
-
-Модуль, вызывающий методы интерфейса и модуль, реализующий интерфейс, для краткости назовём, соответственно,
-*вызывающим* и *реализующим*.
-
-... 
-</Notes>
-
----
-
-<Image src={requiredInterface1} style={{ width: '100vw', height: '100vh'}}/>
-
----
-
-<Image src={requiredInterface0} style={{ width: '100vw', height: '100vh'}}/>
-
-<Notes>
-
-Этот слайд отвечает на вопрос, а в чём, собственно, инверсия, что именно инвертируется ?
-
-Так вот на слайде видно, что направление import(design-time)-зависимости инвертировано относительно
-call(run-time)-зависимости.
- 
-</Notes>
-
----
-
-<CodeSurferColumns themes={[myTheme, myTheme]}>
-
-<Step>
-
-```ts 5:9,14,18 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
-```
-
-```ts 1,3 file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
-```
-
-</Step>
-
-</CodeSurferColumns>
-
-<Notes>
-...
-
-Как это выглядит в TypeScript ?
-Вернёмся к нашему коду.
-
-Здесь *CounterInteractor* играет роль *InterfaceRequirer*-а, причём требуемый интерфейс - *Logger* - определяется в теле
-*CounterInteractor*-а, а значит *Инверсия Зависимости* здесь присутствует.
- 
-*ConsoleLogger* играет роль *InterfaceImplementer*-а - модуля, реализующего требуемый интерфейс. 
-
-...
-</Notes>
-
----
-
 <Image src={requiredInterface2} style={{ width: '100vw', height: '100vh'}}/>
 
 <Notes>
@@ -714,20 +730,6 @@ call(run-time)-зависимости.
 принципа DIP не вполне отражает его суть.
  
 </Notes>
-
----
-
-<p style="font-size: 50px; text-align:left; padding:100px;">
-    <i>
-    One might question why I use the word “inversion”. Frankly, it is because more traditional software development
-    methods, such as Structured Analysis and Design, tend to create software structures in which high level modules
-    depend upon low level modules, and in which abstractions depend upon details. Indeed one of the goals of these
-    methods is to define the subprogram hierarchy that describes how the high level modules make calls to the low level
-    modules. ... Thus, the dependency structure of a well designed object oriented program is “inverted” with respect to
-    the dependency structure that normally results from traditional procedural methods.
-    </i>
-    <p style="font-size: 50px; text-align:right; color:#addb67;">Robert C Martin</p>
-</p>
 
 ---
 
