@@ -25,7 +25,6 @@ import naive3 from "./diagrams/naive3.svg";
 import commonAbstraction from "./diagrams/commonAbstraction.svg";
 import requiredInterface from "./diagrams/requiredInterface.svg";
 import requiredInterface0 from "./diagrams/requiredInterface0.svg";
-import requiredInterface1 from "./diagrams/requiredInterface1.svg";
 import requiredInterface2 from "./diagrams/requiredInterface2.svg";
 
 <Head>
@@ -558,28 +557,11 @@ design-time-зависимости.
 <Notes>
 ...
 
-Особенность ситуации в данном случае состоит в том, что, если в обычном случае код вызывающего модуля пишется под уже
-имеющийся интерфейс, то в случае *требуемого интерфейса* интерфейс определяется самим вызывающим модулем, как правило
-прямо в его теле.  
+Особенность данной ситуации состоит в том, что, если в обычно код вызывающего модуля пишется под уже имеющийся интерфейс,
+то в случае *требуемого интерфейса* этот интерфейс определяется самим вызывающим модулем и, как правило, непосредственно
+в своём теле.  
 
 ... 
-</Notes>
-
----
-
-<Image src={requiredInterface1} style={{ width: '100vw', height: '100vh'}}/>
-
----
-
-<Image src={requiredInterface0} style={{ width: '100vw', height: '100vh'}}/>
-
-<Notes>
-
-Этот слайд отвечает на вопрос, а в чём, собственно, инверсия, что именно инвертируется ?
-
-Так вот на слайде видно, что направление import(design-time)-зависимости инвертировано относительно
-call(run-time)-зависимости.
- 
 </Notes>
 
 ---
@@ -588,10 +570,10 @@ call(run-time)-зависимости.
 
 <Step>
 
-```ts 5:9,14,18 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
+```ts file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
 ```
 
-```ts 1,3 file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
+```ts file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
 ```
 
 </Step>
@@ -602,12 +584,8 @@ call(run-time)-зависимости.
 ...
 
 Как это выглядит в TypeScript ?
-Вернёмся к нашему коду.
 
-Здесь *CounterInteractor* играет роль *InterfaceRequirer*-а, причём требуемый интерфейс - *Logger* - определяется в теле
-*CounterInteractor*-а, а значит *Инверсия Зависимости* здесь присутствует.
- 
-*ConsoleLogger* играет роль *InterfaceImplementer*-а - модуля, реализующего требуемый интерфейс. 
+Рассмотрим ещё одну реализацию счётчика.
 
 ...
 </Notes>
@@ -615,16 +593,6 @@ call(run-time)-зависимости.
 ---
 
 <CodeSurferColumns themes={[myTheme, myTheme]}>
-
-<Step subtitle="Реализация с использованием принципа Dependency Inversion">
-
-```ts file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
-```
-
-```ts file=../../src/dip/ConsoleLogger.ts title="ConsoleLogger"
-```
-
-</Step>
 
 <Step subtitle="Присутствует только run-time-зависимость">
 
@@ -636,24 +604,31 @@ call(run-time)-зависимости.
 
 </Step>
 
-<Step subtitle="Инъекция зависимости через конструктор">
-
-```ts 4 file=../../src/dip/index.ts title="index"
-```
-
-```ts 14 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
-```
-
-</Step>
-
 </CodeSurferColumns>
 
 <Notes>
 ...
 
-Нужно поподробнее и с картинками
+Здесь *CounterInteractor* играет роль *InterfaceRequirer*-а, причём требуемый интерфейс - *Logger* - определяется в теле
+*CounterInteractor*-а.
+ 
+*ConsoleLogger* играет роль *InterfaceImplementer*-а - модуля, реализующего требуемый интерфейс. 
 
 ...
+</Notes>
+
+---
+
+<Image src={requiredInterface0} style={{ width: '100vw', height: '100vh'}}/>
+
+<Notes>
+
+Для большей наглядности рассмотрим UML-диаграмму взаимодействия этих модулей.
+
+Этот слайд показывает, где тут инверсия и что инвертируется.
+
+На слайде видно, что направление import(design-time)-зависимости инвертировано относительно call(run-time)-зависимости.
+ 
 </Notes>
 
 ---
