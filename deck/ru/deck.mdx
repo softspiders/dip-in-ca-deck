@@ -594,7 +594,7 @@ design-time-зависимости.
 
 <CodeSurferColumns themes={[myTheme, myTheme]}>
 
-<Step subtitle="Присутствует только run-time-зависимость">
+<Step subtitle="У счётчика нет import-зависимости от логгера">
 
 ```ts 5:9,14,18 file=../../src/dip/CounterInteractor.ts title="CounterInteractor"
 ```
@@ -613,6 +613,11 @@ design-time-зависимости.
 *CounterInteractor*-а.
  
 *ConsoleLogger* играет роль *InterfaceImplementer*-а - модуля, реализующего требуемый интерфейс. 
+
+И здесь у счётчика - *CounterInteractor*-а нет design-time-зависимости от логгера, хотя, конечно, run-time-зависимость
+осталась.
+
+В то же время реализация логгера *ConsoleLogger* зависит от счётчика, точнее от требуемого им интерфейса *Logger*.
 
 ...
 </Notes>
