@@ -3,17 +3,17 @@ import { Logger } from './CounterInteractor'
 export class TimeConsoleLogger implements Logger {
   error(message: string): void {
     const timestamp = () => `[${new Date().toUTCString()}]`
-    console.error(timestamp(), message)
+    console.info(`ERROR\t${timestamp()}\t${message}`)
   }
 
   info(message: string): void {
     const timestamp = () => `[${new Date().toUTCString()}]`
-    console.info(timestamp(), message)
+    console.info(`INFO\t${timestamp()}\t${message}`)
   }
 
   trace(message: string): void {
     const timestamp = () => `[${new Date().toUTCString()}]`
-    console.log(timestamp(), message)
+    console.info(`TRACE\t${timestamp()}\t${message}`)
   }
 
 }

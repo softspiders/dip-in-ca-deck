@@ -15,7 +15,7 @@ export default class CounterInteractor implements Counter {
 
   increment(): void {
     this.count++
-    this.logger.trace(`count = ${this.count}`)
+    this.logger.info(`count = ${this.count}`)
   }
 
 }

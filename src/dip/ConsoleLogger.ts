@@ -2,15 +2,14 @@ import { Logger } from './CounterInteractor'
 
 export class ConsoleLogger implements Logger {
   error(message: string): void {
-    console.error(message)
+    console.log(`ERROR\t${message}`)
   }
 
   info(message: string): void {
-    console.info(message)
+    console.log(`INFO\t${message}`)
   }
 
   trace(message: string): void {
-    console.log(message)
+    console.log(`TRACE\t${message}`)
   }
-
 }
