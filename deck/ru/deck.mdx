@@ -603,7 +603,7 @@ import-зависимости.
  
 *ConsoleLogger* - вызываемый модуль, реализующий требуемый интерфейс. 
 
-И здесь у счётчика - *CounterInteractor*-а нет design-time-зависимости от логгера, хотя, конечно, run-time-зависимость
+И здесь у счётчика - *CounterInteractor* нет design-time-зависимости от логгера, хотя, конечно, run-time-зависимость
 осталась.
 
 В то же время реализация логгера *ConsoleLogger* зависит от счётчика, точнее от требуемого им интерфейса *Logger*.
@@ -682,9 +682,7 @@ import-зависимости.
 В первую очередь здесь необходимо обратить внимание на правую часть слайда, на то, как создаётся *CounterInteractor* -
 модуль бизнес-логики. Таким образом происходит *инъекция зависимости* - реализации *ConsoleLogger* в *CounterInteractor*.
 
-Но при этом, как будет видно уже на следующем слайде
-
-...
+Но при этом, как будет видно уже на следующем слайде ...
 
 </Notes>
 
@@ -706,7 +704,6 @@ import-зависимости.
  
 <Notes>
 ... справа, <i>CounterInteractor</i> остаётся независимым от <i>ConsoleLogger</i>, поскольку
-
 </Notes>
 
 --- 
@@ -723,6 +720,19 @@ import-зависимости.
 
 </Step>
 
+</CodeSurferColumns>
+
+<Notes>
+
+... в теле *CounterInteractor* присутствует зависимость только от своего же требуемого интерфейса
+*Logger*, через который *CounterInteractor* ...
+ 
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
+
 <Step title="Бизнес-логика - сами счётчики">
 
 ```ts file=../../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
@@ -733,6 +743,18 @@ import-зависимости.
 
 </Step>
 
+</CodeSurferColumns>
+
+<Notes>
+
+... определяет своё взаимодействие с *ConsoleLogger*. ...
+
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
+
 <Step title="В главном нет различий">
 
 ```ts 7:10 file=../../src/naive/NaiveCounter.ts subtitle="Наивная реализация"
@@ -742,6 +764,18 @@ import-зависимости.
 ```
 
 </Step>
+
+</CodeSurferColumns>
+
+<Notes>
+
+... При этом мы видим, что в коде непосредственного исполнения бизнес-логики различий нет, но ...
+
+</Notes>
+
+---
+
+<CodeSurferColumns themes={[naiveTheme, myTheme]}>
 
 <Step title="Дьявол в деталях">
 
@@ -756,21 +790,6 @@ import-зависимости.
 </CodeSurferColumns>
 
 <Notes>
-...
-
-...
-
-в теле *CounterInteractor* присутствует зависимость только от своего же требуемого интерфейса
-*Logger*, через который *CounterInteractor*
- 
-...
- 
-определяет своё взаимодействие с *ConsoleLogger*.
- 
-...
-
-При этом мы видим, что в коде непосредственного исполнения бизнес-логики различий нет, но
-
 ...
  
 "Дьявол в деталях"
