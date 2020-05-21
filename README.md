@@ -7,8 +7,10 @@
 ## Feature tags
 - adapter
 - clean-architecture
+- code-surfer
 - counter-app
 - dependency-inversion
+- mdx-deck
 - ss-deck
 - template
 - typescript
