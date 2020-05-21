@@ -20,7 +20,7 @@
 ---
 
 ## Children
-[**+ db, fullstack, jest, jest-fetch-mock, json-server, react, react-hooks, react-testing-library, rest**](https://github.com/softspiders/cleanarchitecture-react-rest-api-starter)
+[**+ db, fullstack, jest, jest-fetch-mock, json-server, react, react-hooks, react-testing-library, rest**](https://github.com/softspiders/ca-react-rest-api-starter)
 
 ---
 
