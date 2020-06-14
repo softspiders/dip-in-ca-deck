@@ -7,7 +7,6 @@
 ---
 
 ## Feature tags
-- adapter
 - clean-architecture
 - code-surfer
 - counter-app
